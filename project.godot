@@ -14,6 +14,21 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Assets/UI/Scripts/ButtonBase.gd"
 }, {
+"base": "ButtonBase",
+"class": "CancelButton",
+"language": "GDScript",
+"path": "res://Assets/UI/Scripts/CancelButton.gd"
+}, {
+"base": "ButtonBase",
+"class": "DeleteButton",
+"language": "GDScript",
+"path": "res://Assets/UI/Scripts/DeleteButton.gd"
+}, {
+"base": "EditorVCSInterface",
+"class": "GitAPI",
+"language": "NativeScript",
+"path": "res://addons/godot-git-plugin/git_api.gdns"
+}, {
 "base": "Control",
 "class": "MainMenuUI",
 "language": "GDScript",
@@ -28,12 +43,21 @@ _global_script_classes=[ {
 "class": "MessageText",
 "language": "GDScript",
 "path": "res://Assets/UI/Scripts/MessageText.gd"
+}, {
+"base": "ButtonBase",
+"class": "OKButton",
+"language": "GDScript",
+"path": "res://Assets/UI/Scripts/OKButton.gd"
 } ]
 _global_script_class_icons={
 "ButtonBase": "",
+"CancelButton": "",
+"DeleteButton": "",
+"GitAPI": "",
 "MainMenuUI": "",
 "MessageButton": "",
-"MessageText": ""
+"MessageText": "",
+"OKButton": ""
 }
 
 [application]
@@ -47,6 +71,11 @@ config/icon="res://icon.png"
 Config="*res://Assets/World/Config.gd"
 Audio="*res://Assets/World/Audio.gd"
 Global="*res://Assets/World/Global.gd"
+
+[editor]
+
+version_control_autoload_on_startup=true
+version_control_plugin_name="GitAPI"
 
 [gui]
 
